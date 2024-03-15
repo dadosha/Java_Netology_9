@@ -27,21 +27,19 @@ public class Radio {
         if (newVolume > 100) {
             currentVolume = 100;
         } else if (newVolume < 0) {
-            currentRadioStation = 0;
+            currentVolume = 0;
         } else {
-            currentRadioStation = newVolume;
+            currentVolume = newVolume;
         }
-
     }
-
     public void nextRadioStation() {
-        int newRadioStation = currentRadioStation++;
-        setCurrentRadioStation(newRadioStation);
+        currentRadioStation++;
+        setCurrentRadioStation(currentRadioStation);
     }
 
     public void prevRadioStation() {
-        int newRadioStation = currentRadioStation--;
-        setCurrentRadioStation(newRadioStation);
+        currentRadioStation--;
+        setCurrentRadioStation(currentRadioStation);
     }
 
     public void increaseVolume() {
