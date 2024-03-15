@@ -47,9 +47,7 @@ public class RadioTest {
         Radio radio = new Radio();
 
         radio.setCurrentRadioStation(setStation);
-        System.out.println(radio.getCurrentRadioStation());
         radio.prevRadioStation();
-        System.out.println(radio.getCurrentRadioStation());
         int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
