@@ -108,4 +108,20 @@ public class RadioTest {
 
         Assertions.assertEquals(15, radio.getCountRadioStation());
     }
+
+    @Test
+    public void testRadioStation() {
+        Radio radio = new Radio(15, 10, 10);
+
+        Assertions.assertEquals(15, radio.getCountRadioStation());
+        Assertions.assertEquals(10, radio.getCurrentRadioStation());
+        Assertions.assertEquals(10, radio.getCurrentVolume());
+    }
+
+    @Test
+    public void testSetCountRadioStation() {
+        Radio radio = new Radio();
+        radio.setCountRadioStation(15);
+        Assertions.assertEquals(15, radio.getCountRadioStation());
+    }
 }
