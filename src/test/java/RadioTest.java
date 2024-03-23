@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.api.Test;
 import ru.netology.java9.Radio;
 
 public class RadioTest {
@@ -99,5 +100,28 @@ public class RadioTest {
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCountRadioStation() {
+        Radio radio = new Radio(15);
+
+        Assertions.assertEquals(15, radio.getCountRadioStation());
+    }
+
+    @Test
+    public void testRadioStation() {
+        Radio radio = new Radio(15, 10, 10);
+
+        Assertions.assertEquals(15, radio.getCountRadioStation());
+        Assertions.assertEquals(10, radio.getCurrentRadioStation());
+        Assertions.assertEquals(10, radio.getCurrentVolume());
+    }
+
+    @Test
+    public void testSetCountRadioStation() {
+        Radio radio = new Radio();
+        radio.setCountRadioStation(15);
+        Assertions.assertEquals(15, radio.getCountRadioStation());
     }
 }
